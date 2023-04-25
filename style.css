@@ -1,23 +1,26 @@
 * {
     margin: 0px;
     padding: 0px;
-    border: solid 1px whitesmoke;
+    /*border: solid 1px whitesmoke;*/ /*Debug Mode Border*/
 }
 
 body {
     background-color: #032b61;
+    font-family: 'Fjalla One', sans-serif;
 }
 
 .links {
-    background-color: #7C2C40;
+    background-color: #336ebb;
     width: 100%;
     height: 60px;
+    position: fixed;
 }
 
 .logo {
     width: 70px;
     height: 70px;
     position: fixed;
+    left: 49%;
 }
 
 .logo:hover, .fandom:hover{
@@ -25,13 +28,35 @@ body {
 }
 
 .fandom {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     filter: grayscale(100%);
+    left: 97.8%;
+    margin-right: 20px;
+}
+
+a.info, .fandom {
+    position: fixed;
+    top: 10px;
 }
 
 a.info {
     color: white;
-    font-size: large;
+    font-size: xx-large;
+    justify-content: center;
+    margin-left: 20px;
+    /*Amimation*/
+    overflow: hidden;
+    background: linear-gradient(to right, gray, gray 50%, white 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
+
+a.info:hover {
+    background-position: 0 100%;
 }
 
