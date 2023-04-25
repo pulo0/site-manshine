@@ -20,8 +20,14 @@ body {
     position: fixed;
 }
 
-.logo:hover{
+.logo:hover, .fandom:hover{
     transform: scale(0.95);
+}
+
+.fandom {
+    width: 35px;
+    height: 35px;
+    filter: grayscale(100%);
 }
 
 a.info {
