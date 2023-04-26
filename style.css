@@ -1,15 +1,22 @@
+/*Eliminate all the default margins and paddings 
+on the start (like the gap between the page
+and the nav bar) + for debug - white border to see
+every single element's padding etc.*/
 * {
     margin: 0px;
     padding: 0px;
-    /*border: solid 1px whitesmoke;*/ /*Debug Mode Border*/
+    border: solid 1px whitesmoke; /*Debug Mode Border*/
 }
 
+/*Body to set font and color of page, and no overflow*/
 body {
     background-color: #032b61;
     font-family: 'Fjalla One', sans-serif;
     overflow: hidden;
 }
 
+/*Setting up the nav element
+his position and scale*/
 .links {
     background-color: #336ebb;
     width: 100%;
@@ -17,6 +24,9 @@ body {
     position: fixed;
 }
 
+/*Setting up position of the logo
+also it gives the logo place in
+the middle (this left: thingy)*/
 .logo {
     width: 70px;
     height: 70px;
@@ -24,31 +34,42 @@ body {
     left: 49%;
 }
 
+/*On hover with a mouse both logos scale down*/
 .logo:hover, .fandom:hover {
     transform: scale(0.85);
 }
 
+/*This smoothes out the transition between scaling
+down on hover and moving out from the element*/
+/*Why not in :hover though? Well, as I said
+it smoothes out on hover AND when the mouse
+moves out of the picture*/
 .logo, .fandom {
     transition: transform 200ms ease;
 }
 
+/*fandom logo - setting up the pos
+and the scale of the image, also
+it moves it to left corner*/
 .fandom {
+    position: fixed;
     width: 50px;
     height: 50px;
-    filter: grayscale(100%);
+    filter: grayscale(100%); /*filter to turn picture black&white*/
     left: 96%;
     margin-right: 20px;
     margin-top: 1px;
 }
 
-a.info, .fandom {
-    position: fixed;
-}
-
+/*It sets up the link About Us
+its position, text stuff*/
 a.info {
+    /*font/text decoration, personalization*/
     color: white;
     font-size: xx-large;
     justify-content: center;
+    /*Position stuff*/
+    position: fixed;
     margin-left: 20px;
     top: 10px;
     /*Amimation*/
@@ -61,18 +82,22 @@ a.info {
     transition: background-position 275ms ease;
 }
 
+/*On hover it will fill the gradient that is gray to 100%*/
+/*Also whole animation is in a.info just to be more smooth*/
 a.info:hover {
     background-position: 0 100%;
 }
 
+/*Div of a moving text it sets
+up his position and scale*/
 .move {
     position: relative;
-    width: 1920px;
+    width: 100%;
     height: 40px;
     top: 4em;
 }
 
-/**Animation in texts (from left to right)
+/*Animation in texts (from left to right)
 It will initate the animation to both texts*/
 p.text {
     width: fit-content;
@@ -81,17 +106,19 @@ p.text {
     font-style: italic;
     letter-spacing: 4px;
     opacity: 50%;
-    animation-name: rightToLeft;
+    animation-name: leftToRight;
     animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
 /*keyframes from where the text needs to go
-from beginnig of a page (1920px) to the end
-of a page and some offset to go off page just
-to the animation was seamless*/
-@keyframes rightToLeft {
-    0% {transform: translateX(1920px);}
-    100% {transform: translateX(-650px);}
+from beginnig of a page with some offset 
+(-600px from the left) to the end
+of a page and some offset to just
+to the animation was seamless 
+(1920px - fullscreen, 80px - offset)*/
+@keyframes leftToRight {
+    0% {transform: translateX(-650px);}
+    100% {transform: translateX(2000px);}
 }
