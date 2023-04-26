@@ -7,6 +7,7 @@
 body {
     background-color: #032b61;
     font-family: 'Fjalla One', sans-serif;
+    overflow: hidden;
 }
 
 .links {
@@ -19,7 +20,7 @@ body {
 .logo {
     width: 70px;
     height: 70px;
-    position: fixed;
+    position: absolute;
     left: 49%;
 }
 
@@ -51,7 +52,6 @@ a.info {
     margin-left: 20px;
     top: 10px;
     /*Amimation*/
-    overflow: hidden;
     background: linear-gradient(to right, gray, gray 50%, white 50%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -65,3 +65,33 @@ a.info:hover {
     background-position: 0 100%;
 }
 
+.move {
+    position: relative;
+    width: 1920px;
+    height: 40px;
+    top: 4em;
+}
+
+/**Animation in texts (from left to right)
+It will initate the animation to both texts*/
+p.text {
+    width: fit-content;
+    color: white;
+    font-size: x-large;
+    font-style: italic;
+    letter-spacing: 4px;
+    opacity: 50%;
+    animation-name: rightToLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/*keyframes from where the text needs to go
+from beginnig of a page (1920px) to the end
+of a page and some offset to go off page just
+to the animation was seamless*/
+@keyframes rightToLeft {
+    0% {transform: translateX(1920px);}
+    100% {transform: translateX(-650px);}
+}
