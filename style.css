@@ -5,14 +5,14 @@ every single element's padding etc.*/
 * {
     margin: 0px;
     padding: 0px;
-    border: solid 1px whitesmoke; /*Debug Mode Border*/
+    /*border: solid 1px whitesmoke;*/ /*Debug Mode Border*/
 }
 
 /*Body to set font and color of page, and no overflow*/
 body {
     background-color: #032b61;
     font-family: 'Fjalla One', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /*Setting up the nav element
@@ -68,6 +68,7 @@ a.info {
     color: white;
     font-size: xx-large;
     justify-content: center;
+    text-decoration-line: none;
     /*Position stuff*/
     position: fixed;
     margin-left: 20px;
