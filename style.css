@@ -22,6 +22,7 @@ his position and scale*/
     width: 100%;
     height: 60px;
     position: fixed;
+    box-shadow: 0 4px 10px 0 #7d0ac04d, 0 8px 15px 0 #05419159;
 }
 
 /*Setting up position of the logo
@@ -139,14 +140,14 @@ to the animation was seamless
     background-color: #336ebb;
     border-radius: 10px;
     border-collapse: collapse;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.884), 0 8px 15px 0 rgba(0, 0, 0, 0.884);
+    box-shadow: 0 4px 10px 0 #000000e1, 0 8px 15px 0 #000000e1;
 }
 
 .tableLeftTop h1 {
     background-color: #6a9ee2;
     text-align: center;
     font-style: italic;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.884), 0 8px 15px 0 rgba(0, 0, 0, 0.884);
+    box-shadow: 0 4px 10px 0 #000000e1, 0 8px 15px 0 #000000e1;
     /*Position*/
     margin-left: 7px;
     margin-right: 7px;
@@ -175,6 +176,7 @@ to the animation was seamless
     margin-left: 3px;
     width: 80px;
     height: 90px;
+    justify-self: center;
 }
 
 .tableLeftBottom{
@@ -192,14 +194,14 @@ to the animation was seamless
     background-color: #336ebb;
     border-radius: 10px;
     border-collapse: collapse;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.884), 0 8px 15px 0 rgba(0, 0, 0, 0.884);
+    box-shadow: 0 4px 10px 0 #000000e1, 0 8px 15px 0 #000000e1;
 }
 
 .tableLeftBottom h1 {
     background-color: #6a9ee2;
     text-align: center;
     font-style: italic;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.884), 0 8px 15px 0 rgba(0, 0, 0, 0.884);
+    box-shadow: 0 4px 10px 0 #000000e1, 0 8px 15px 0 #000000e1;
     /*Position*/
     margin-left: 7px;
     margin-right: 7px;
