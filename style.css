@@ -32,7 +32,7 @@ the middle (this left: thingy)*/
     width: 70px;
     height: 70px;
     position: absolute;
-    left: 49%;
+    left: 48%;
 }
 
 /*On hover with a mouse both logos scale down*/
@@ -125,17 +125,30 @@ to the animation was seamless
     100% {transform: translateX(2000px);}
 }
 
-.tableLeftTop{
+.tableLeftTop, .tableLeftBottom, .tableMiddle, .tableRight{
     color: white;
     position: absolute;
     width: 500px;
     margin: 10px;
     float: left;
-    left: 10px;
+    left: 2.5em;
     top: 13%;
 }
 
-.tableLeftTop table {
+.tableLeftBottom {
+    left: 36.5% !important;
+}
+
+.tableMiddle {
+    left: 36.5% !important;
+    top: 65% !important;
+}
+
+.tableRight {
+    left: 85em !important;
+}
+
+.tableLeftTop table, .tableLeftBottom table, .tableMiddle table, .tableRight table {
     width: 500px;
     background-color: #336ebb;
     border-radius: 10px;
@@ -143,7 +156,7 @@ to the animation was seamless
     box-shadow: 0 4px 10px 0 #000000e1, 0 8px 15px 0 #000000e1;
 }
 
-.tableLeftTop h1 {
+.tableLeftTop h1, .tableLeftBottom h1, .tableMiddle h1, .tableRight h1 {
     background-color: #6a9ee2;
     text-align: center;
     font-style: italic;
@@ -159,14 +172,18 @@ to the animation was seamless
     width: 80px;
 }
 
-.row {
+.row, .lastRow {
     text-align: center;
     font-size: 25px;
-    border-bottom: solid 1px rgb(70, 70, 70);
+    border-bottom: solid 1px #464646;
     transition: transform 200ms ease;
 }
 
-.row:hover{
+.lastRow {
+    border-bottom: none !important;
+}
+
+.row:hover, .lastRow:hover{
     transform: scale(1.05);
 }
 
@@ -179,32 +196,32 @@ to the animation was seamless
     justify-self: center;
 }
 
-.tableLeftBottom{
-    color: white;
-    position: absolute;
-    width: 500px;
-    margin: 10px;
-    float: left;
-    left: 30%;
-    top: 13%;
-}
-
-.tableLeftBottom table {
-    width: 500px;
+.ending {
     background-color: #336ebb;
-    border-radius: 10px;
-    border-collapse: collapse;
-    box-shadow: 0 4px 10px 0 #000000e1, 0 8px 15px 0 #000000e1;
+    width: 100%;
+    height: 110px;
+    position: fixed;
+    top: 89%;
 }
 
-.tableLeftBottom h1 {
-    background-color: #6a9ee2;
-    text-align: center;
-    font-style: italic;
-    box-shadow: 0 4px 10px 0 #000000e1, 0 8px 15px 0 #000000e1;
-    /*Position*/
-    margin-left: 7px;
-    margin-right: 7px;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+.ending ul {
+    color: white;
+    display: block;
+    width: fit-content;
+}
+
+.imageFooter {
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    left: 80%;
+    bottom: 0px;
+    padding-bottom: 15px;
+    margin: 0 60px;
+}
+
+.listText {
+    font-size: x-large;
+    margin: 15px 0;
+    font-weight: bold;
 }
