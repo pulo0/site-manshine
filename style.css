@@ -125,6 +125,8 @@ to the animation was seamless
     100% {transform: translateX(2000px);}
 }
 
+/*Sets default setting, like white text, pos
+width etc. to every single to table that is*/
 .tableLeftTop, .tableLeftBottom, .tableMiddle, .tableRight{
     color: white;
     position: absolute;
@@ -135,19 +137,26 @@ to the animation was seamless
     top: 13%;
 }
 
+/*Overrides a remaining members table's position to
+give it somewhere else to be seen clearly*/
 .tableLeftBottom {
     left: 36.5% !important;
 }
 
+/*Overrides a matches table's position to
+give it somewhere else to be seen clearly*/
 .tableMiddle {
     left: 36.5% !important;
     top: 65% !important;
 }
 
+/*Overrides a upcoming events table's position to
+give it somewhere else to be seen clearly*/
 .tableRight {
     left: 85em !important;
 }
 
+/*This gives every single table it's a curve in the border and it's shadow*/
 .tableLeftTop table, .tableLeftBottom table, .tableMiddle table, .tableRight table {
     width: 500px;
     background-color: #336ebb;
@@ -156,6 +165,8 @@ to the animation was seamless
     box-shadow: 0 4px 10px 0 #000000e1, 0 8px 15px 0 #000000e1;
 }
 
+/*Title of tables, sets a style of a text and the backkground color
+and gives it a offset in specific sides of a margin*/
 .tableLeftTop h1, .tableLeftBottom h1, .tableMiddle h1, .tableRight h1 {
     background-color: #6a9ee2;
     text-align: center;
@@ -168,10 +179,14 @@ to the animation was seamless
     border-top-left-radius: 15px;
 }
 
+/*Shrinks the first column of Highlighted Players table*/
 .tableLeftTop img, .headRowFirst{
     width: 80px;
 }
 
+/*Gives every single row and the last row it's own
+animation and the divider (in the code it is a border
+but only at the bottom)*/
 .row, .lastRow {
     text-align: center;
     font-size: 25px;
@@ -179,14 +194,20 @@ to the animation was seamless
     transition: transform 200ms ease;
 }
 
+/*Eliminates the divider at the last border,
+just thus the border not be seen going out
+of range of a table*/
 .lastRow {
     border-bottom: none !important;
 }
 
+/*Scales up when the mouse points an item
+in a table, animation is in .row, .lastRow*/
 .row:hover, .lastRow:hover{
     transform: scale(1.05);
 }
 
+/*Sets the width and height of a member images*/
 .memberImage {
     image-rendering: optimizeQuality;
     border-radius: 5px;
@@ -196,6 +217,8 @@ to the animation was seamless
     justify-self: center;
 }
 
+/*Footer thingys*/
+/*Just like the navbar, it's exactly like it*/
 .ending {
     background-color: #336ebb;
     width: 100%;
@@ -204,12 +227,23 @@ to the animation was seamless
     top: 89%;
 }
 
+/*Just adjustments on the list in the footer
+width, color of the text*/
 .ending ul {
     color: white;
     display: block;
     width: fit-content;
+    font-size: x-large;
+    margin: 15px 0;
+    font-weight: bold;
 }
 
+/*Sets up separetely the margin between list's items*/
+.listText {
+    margin: 15px 0;
+}
+
+/*Adjusting the image (Blue Lock image) to be on the left*/
 .imageFooter {
     width: 300px;
     height: 150px;
@@ -218,10 +252,4 @@ to the animation was seamless
     bottom: 0px;
     padding-bottom: 15px;
     margin: 0 60px;
-}
-
-.listText {
-    font-size: x-large;
-    margin: 15px 0;
-    font-weight: bold;
 }
